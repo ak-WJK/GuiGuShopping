@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.atguigu.guigushopping.home.activity.MainActivity">
+
+
+    <!--&lt;!&ndash;顶布局&ndash;&gt;-->
+    <!--<include layout="@layout/home_titlebar_layout" />-->
+
+
+    <!--中间页面-->
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_main"
+        android:layout_weight="1">
+
+    </FrameLayout>
+
+
+    <!--底部按钮-->
+    <RadioGroup
+        android:id="@+id/rg_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/home_bottom_parent_bg"
+        android:orientation="horizontal">
+
+        <RadioButton
+
+            android:id="@+id/rb_home"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/welcome_rb_home_select"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/rb_type"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/welcome_rb_type_select"
+            android:text="分类" />
+
+        <RadioButton
+            android:id="@+id/rb_faxian"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/welcome_rb_faxian_select"
+            android:text="发现" />
+
+        <RadioButton
+            android:id="@+id/rb_gouwuche"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/welcome_rb_shopcar_select"
+            android:text="购物车" />
+
+        <RadioButton
+            android:id="@+id/rb_gerencenter"
+            style="@style/rb_style"
+            android:drawableTop="@drawable/welcome_rb_gerencenter_select"
+            android:text="个人中心" />
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.atguigu.guigushopping">
+    /调用相机
+    <uses-permission android:name="android.permission.CAMERA" />
+    //震动（用不到震动可以去掉）
+    <uses-permission android:name="android.permission.VIBRATE" />
+    //闪光灯（如不用闪光灯可以去掉）
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".app.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".home.activity.MainActivity"
+            android:configChanges="screenSize|orientation|keyboardHidden"
+            android:launchMode="singleTask" />
+        <activity android:name=".home.activity.ScanActivity" />
+        <activity android:name=".home.activity.GoodsInfoActivity" />
+        <activity android:name=".home.activity.WebViewActivity" />
+        <activity android:name=".home.activity.CallCenterActivity"></activity>
+    </application>
+
+</manifest>
